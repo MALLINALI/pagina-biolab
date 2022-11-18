@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="C.css">
+ <!-- Swiper CSS -->
+ <link rel="stylesheet" href="swiper-bundle.min.css">
+
+ <!-- CSS -->
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <a href="#" class="logo">
+        <img src="BIO.jpg" class="logo">
+    </a>
+
+    <nav class="navbar">
+        <a href="PORTADA.html">Portada</a>
+        <a href="MAMUT.html">BioLab</a>
+        <a href="DATOS.html">Datos-Extras</a>
+        <a href="REC.html">Reclutamiento</a>
+        <a href="CNC.html">Conclusion</a>
+        <a href="BIB.html">Bibliografia</a>
+        
+        
+    </nav>
+
+    <div class="icons">
+        <a href="EXAM.html" class="fas fa-book" title="EXAMENES"></a>
+        <a href="TRABAJO.html" class="fas fa-user" title="FORMA DE TRABAJO"></a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>CONCLUSIÓN<h3>
+        
+
+
+    </div>
+    
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+<section class="about" id="about">
+
+    <h1 class="heading"> <span> RECAPITULACIÓN<span>:</h1>
+
+    <div class="row">
+
+        <div class="video-container">
+            <video src="BILLY.mp4" loop autoplay muted></video>
+            <h3>FIN DEL PROYECTO</h3>
+        </div>
+
+        <div class="content">
+            <h3></h3>
+            <p> Los laboratorios son lugares donde se realizan diversos examenes, investigaciones, y trabajos cruciales y de caracter cientifíco y tecnológico. 
+                En el laboratorio clinico se realizan estudios en base al diagnostico. y para establecer el seguimiento de muchas enfermedades. La aplicación que tienen es tan importante que se tiene que acompañar de una buena admisnitración, que se encargue de gestionar, organizar, dirigir y asignar recursos eficientemente, para lograr un objetivo determinado. 
+               Teniendo un control y metas y objetivos claros, se puede tener un laboratorio confiable, con personal capacitado y que de a los pacientes resultados certeros.</p>
+            
+            
+        </div>
+    <p class="CURRY">El control de calidad garantiza que todas las actividades y acciones emprendidas
+        para el desarrollo de un producto o resultado satisfagan las necesidades del
+        paciente y los estándares del laboratorio, por ejemplo: materiales, costos, tiempos
+        de producción, entre otros.Con base a los temas vistos e investigados, el control de calidad en el laboratorio es
+        un mecanismo diseñado para detectar, reducir, y corregir posibles deficiencias
+        analíticas internas, antes de emitir un resultado. y tiene por finalidad aumentar la
+        calidad y confiabilidad de los resultados informados. 
+        
+        </p>
+    <p class="CURRY">
+        Para ello se hace uso de distintos manuales que sirven como control, sobre el cual
+        se realiza una serie de determinaciones y anotaciones al comienzo de cada corrida
+        analítica, luego de que un instrumento recibe servicio técnico, cada vez que se
+        cambia un lote de reactivos, luego de cada calibración, y toda vez que un resultado
+        parezca inapropiado, entre muchas otras actividades que se realicen en el
+        laboratorio.
+        Con la implementación del aspecto legal, es decir, de las normas internacionales
+        como la ISO 9001 2015, o de las normas nacionales, tales como la NORMA
+        OFICIAL MEXICANA NOM-007-SSA3-2011, y de la mano con las auditorias tanto
+        internas como externas, se fortalece la confiabilidad de los resultados del
+        laboratorio, ya que considera todos los requisitos técnicos necesarios para el buen
+        desempeño de estos, como la competencia técnica del personal, los equipos, de
+        laboratorio y los materiales e insumos utilizados para el desarrollo de las pruebas
+        analiticas.
+    </p>
+    </div>
+
+</section>
+
+
+
+<script type="text/javascript">
+    let navbar = document.querySelector('.navbar')
+
+document.querySelector('#menu-bar').onclick = () =>{
+    navbar.classList.toggle('active');
+}
+
+document.querySelector('#close').onclick = () =>{
+    navbar.classList.remove('active');
+}
+
+window.onscroll = () =>{
+
+    navbar.classList.remove('active');
+
+    if(window.scrollY > 100){
+        document.querySelector('header').classList.add('active');
+    }else{
+        document.querySelector('header').classList.remove('active');
+    }
+
+}
+
+let themeToggler = document.querySelector('#theme-toggler');
+
+themeToggler.onclick = () =>{
+    themeToggler.classList.toggle('fa-sun');
+    if(themeToggler.classList.contains('fa-sun')){
+        document.querySelector('body').classList.add('active');
+    }else{
+        document.querySelector('body').classList.remove('active');
+    }
+}
+
+document.querySelectorAll('.small-image-1').forEach(images =>{
+    images.onclick = () =>{
+        document.querySelector('.big-image-1').src = images.getAttribute('src');
+    }
+});
+
+document.querySelectorAll('.small-image-2').forEach(images =>{
+    images.onclick = () =>{
+        document.querySelector('.big-image-2').src = images.getAttribute('src');
+    }
+});
+
+document.querySelectorAll('.small-image-3').forEach(images =>{
+    images.onclick = () =>{
+        document.querySelector('.big-image-3').src = images.getAttribute('src');
+    }
+});
+
+let countDate = new Date('aug 1, 2021 00:00:00').getTime();
+
+function countDown(){
+
+    let now = new Date().getTime();
+    gap = countDate - now;
+
+    let seconds = 1000;
+    let minutes = seconds * 60;
+    let hours = minutes * 60;
+    let days = hours * 24;
+
+    let d = Math.floor(gap / (days));
+    let h = Math.floor((gap % (days)) / (hours));
+    let m = Math.floor((gap % (hours)) / (minutes));
+    let s = Math.floor((gap % (minutes)) / (seconds));
+
+    document.getElementById('days').innerText = d;
+    document.getElementById('hours').innerText = h;
+    document.getElementById('minutes').innerText = m;
+    document.getElementById('seconds').innerText = s;
+
+}
+
+setInterval(function(){
+    countDown()
+},1000);
+
+var swiper = new Swiper(".product-slider", {
+    slidesPerView: 3,
+    loop:true,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+        1000: {
+            slidesPerView: 3,
+        },
+    },
+});
+
+var swiper = new Swiper(".review-slider", {
+    slidesPerView: 3,
+    loop:true,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        550: {
+          slidesPerView: 2,
+        },
+        800: {
+          slidesPerView: 3,
+        },
+        1000: {
+            slidesPerView: 3,
+        },
+    },
+});
+</script>
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>REDES SOCIALES</h3>
+        <a href="https://www.facebook.com/CBTIS03OFICIALTLAX">"https://www.facebook.com/BIOLAB-OFICIALTLAX" </a>
+        <a href="https://www.instagram.com/cbtis03oficial/" >"https://www.instagram.com/BIOLAB-OFICIALTLAX/"</a>    
+        </div>
+
+        <div class="box">
+            <h3>HORARIOS:</h3>
+            <a href="#">Lunes a Viernes de 8am a 7pm</a>
+            <a href="#">Sabado a Domingo de 10am a 5pm</a>
+            
+        </div>
+
+        <div class="box">
+            <h3>CORREOS ELECTRONICOS</h3>
+            <a href="#">LABORATORIO_CLINICO@gmaill.com</a>
+            <a href="#">BIO_LAB@gmail.com</a>
+        </div>
+
+        <div class="box">
+            <h3>UBICACIÓN Y NÚMERO</h3>
+            <a href="#">(246) 462-01-35</a>
+            <a href="#">+52 (246) 466-08-92</a>
+            <a href="#">Carr. Federal Puebla - Tlaxcala 63, Centro, Segunda Secc, 90740 <br> Zacatelco, Tlax.</a>
+            
+        </div>
+
+    </div>
+
+    <div class="credit"> created by <span> BEKA_COMPANY </span>|| Todos los Derechos Reservados </div>
+
+</section>
+
+    
+</body>
+</html>
